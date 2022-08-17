@@ -6,6 +6,8 @@ editor: visual
 
 ## First Note
 
+New text entered at Github
+
 This is my first text.
 
 ```{r}
