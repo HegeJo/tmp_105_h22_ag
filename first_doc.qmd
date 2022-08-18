@@ -1,6 +1,6 @@
 ---
 title: "My First Quarto Doc"
-format: html
+format: pdf
 editor: visual
 ---
 
@@ -8,7 +8,11 @@ editor: visual
 
 Edit from macbook pro
 
-New text entered at Github
+$$
+\sum_{i=1}^n (x_i · \beta)
+$$
+
+New text entered at Github inline math $\sum_{i=1}^n (x_i · \beta)$ here
 
 This is my first text.
 
@@ -41,3 +45,5 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+small update to test
