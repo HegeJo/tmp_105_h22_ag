@@ -3,6 +3,8 @@
 *.pdf
 *.Rproj
 .gitignore
+*.html
+*_files
 
 # History files
 .Rhistory

@@ -1,0 +1,20 @@
+---
+title: "Innledende R notater"
+format: html
+lang: nb
+editor: visual
+---
+
+## Innledning
+
+Her er min aller første R kode.
+
+```{r}
+x <- 3 + 3
+x
+```
+
+```{r}
+# eller begge samtidig
+(x <- 3 + 3)
+```
