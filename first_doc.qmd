@@ -1,0 +1,43 @@
+---
+title: "My First Quarto Doc"
+format: html
+editor: visual
+---
+
+## First Note
+
+Edit from macbook pro
+
+New text entered at Github
+
+This is my first text.
+
+```{r}
+rnorm(n = 10)
+```
+
+```{r}
+set.seed(1234)
+rnorm(n = 10)
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
