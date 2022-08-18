@@ -1,5 +1,7 @@
 # my additions
 *.Rproj
+*.html
+*_files
 
 # History files
 .Rhistory
