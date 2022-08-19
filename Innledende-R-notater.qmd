@@ -144,3 +144,85 @@ x <- c(x, 10)
 ```{r}
 x + y
 ```
+
+Et enklere eksempel
+
+```{r}
+(x <- 2:4)
+```
+
+```{r}
+(y <- 10:12)
+```
+
+```{r}
+(x + y)
+```
+
+```{r}
+(y <- c(y, y + 0.5 * x))
+```
+
+```{r}
+# automatisk replikering av korteste
+# ingen warning
+(x + y)
+```
+
+```{r}
+y
+```
+
+```{r}
+rep(x, 2)
+```
+
+Vi ser at x + y nå er x + y der x er replikert 2 ganger. Merk at R gjøre dette **UTEN** noen form for asvarsel.
+
+```{r}
+# legger til et tall (4) i fronten på x
+(x <- c(4, x))
+```
+
+```{r}
+# Nå er lengen av x 4 og lengden av y er 6. Tar vi nå x + y vil vi få en advarsel om at lengden av x ikke går opp i lengden av y
+(x + y)
+# men vi får svaret, x + y der den korteste, dvs x, 
+# er replikert og man bruker de verdiene som trengs for å matche y
+```
+
+Merk!
+
+```{r}
+(1/7) * 7 == 1L
+```
+
+men
+
+```{r}
+(1/49) * 49 == 1L
+```
+
+Hvor ofte skjer dette?
+
+```{r}
+x <- 1:10000
+typeof(x)
+```
+
+```{r}
+x_inv <- 1/x
+table(x_inv * x == 1L)
+```
+
+De første 30 som er FALSE
+
+```{r}
+head(x[!(x_inv * x == 1L)], n = 30)
+```
+
+Løsning: bruk `near`
+
+```{r}
+table(dplyr::near(x_inv * x, 1L))
+```
