@@ -1,0 +1,14 @@
+---
+title: "Citations in Quarto Documents"
+format: html
+editor: visual
+bibliography: references.bib
+---
+
+## Innledning
+
+Vi ønsker å benytte siteringssystemet innebygd i RStudio. Dette jobber sammen med Zotero og Better Bibtex.
+
+Noen eksempler på fine R pakker er: @assertthat, @backports, @tidyverse and @base.
+
+## References
