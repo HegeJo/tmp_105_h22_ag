@@ -11,7 +11,17 @@ library(tidyverse)
 
 ## Innledning
 
-Her er min aller første R kode.
+Her er min aller første R kode. ghasdjhjad hjdhjda
+
+#### Overskrift
+
+-   første
+
+-   anbdre
+
+    -   Matte $\sum_{i=1}^n x_i$
+
+-   tredje
 
 ```{r}
 x <- 3 + 3
@@ -734,4 +744,22 @@ print(stringr::str_pad(x, width = dig, side = "left", pad = " "),
 
 ```{r}
 stupid_fun(x1 = -13, n = 33, d = 5, print_to_console = TRUE)
+```
+
+## Head and tails
+
+```{r}
+head_and_tail <- function(x, n=3L) {
+res = rbind(rep('Head',length(names(x))),
+        head(x, n = n),
+        rep('*-*-*',length(names(x))), 
+        rep('Tail',length(names(x))), 
+        tail(x, n = n)
+        )
+as_tibble(res)
+}
+```
+
+```{r}
+head_and_tail(mtcars, n = 7)
 ```
